@@ -1,0 +1,31 @@
+
+# BEGIN WordPress
+# As diretrizes (linhas) entre "BEGIN WordPress" e "END WordPress" são
+# geradas dinamicamente e só devem ser modificadas através de filtros do WordPress.
+# Quaisquer alterações nas diretivas entre esses marcadores serão sobrescritas.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /portfolio/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /portfolio/index.php [L]
+</IfModule>
+
+# END WordPress
+
+# BEGIN Segurança (Léo Nunes)
+# Bloqueia arquivos que expõem a versão exata do WordPress/plugins
+# (alvo comum de scanners automatizados de vulnerabilidade).
+<FilesMatch "^(readme\.html|readme\.txt|license\.txt|CHANGELOG\.md)$">
+	Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+	Header always set X-Content-Type-Options "nosniff"
+	Header always set X-Frame-Options "SAMEORIGIN"
+	Header always set Referrer-Policy "strict-origin-when-cross-origin"
+	Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+# END Segurança (Léo Nunes)

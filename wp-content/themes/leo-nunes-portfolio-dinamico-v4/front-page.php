@@ -147,7 +147,7 @@ get_header();
     <!-- About Section -->
     <?php
       $leo_about_sub    = leo_home_field( 'about_subtitulo', 'Desenvolvedor front-end há mais de 15 anos, com histórico consistente entregando interfaces web em produção — de agências e e-commerces a uma confederação nacional. Meu foco é traduzir design em código limpo, responsivo e de fácil manutenção' );
-      $leo_about_img    = leo_home_field( 'about_imagem', get_template_directory_uri() . '/assets/img/bg-header.png' );
+      $leo_about_img    = leo_home_field( 'about_imagem', get_template_directory_uri() . '/assets/img/bg-header.jpg' );
       $leo_about_titulo2 = leo_home_field( 'about_titulo2', 'Analísta & Desenvolvedor Web.' );
       $leo_about_par1   = leo_home_field( 'about_paragrafo1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' );
       $leo_about_birthday  = leo_home_field( 'about_birthday', '1 May 1995' );
@@ -172,7 +172,7 @@ get_header();
 
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
-            <img src="<?php echo esc_url( $leo_about_img ); ?>" class="img-fluid" alt="" style="border-radius: 30px;">
+            <img src="<?php echo esc_url( $leo_about_img ); ?>" class="img-fluid" alt="" style="border-radius: 30px;" loading="lazy">
           </div>
           <div class="col-lg-8 content">
             <h2><?php echo esc_html( $leo_about_titulo2 ); ?></h2>
@@ -481,7 +481,7 @@ get_header();
                     <span><?php echo esc_html( $leo_dep_texto ); ?></span>
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
-                  <img src="<?php echo esc_url( $leo_dep_img ); ?>" class="testimonial-img" alt="<?php the_title_attribute(); ?>">
+                  <img src="<?php echo esc_url( $leo_dep_img ); ?>" class="testimonial-img" alt="<?php the_title_attribute(); ?>" loading="lazy">
                   <h3><?php the_title(); ?></h3>
                   <?php if ( $leo_dep_cargo ) : ?><h4><?php echo esc_html( $leo_dep_cargo ); ?></h4><?php endif; ?>
                 </div>
