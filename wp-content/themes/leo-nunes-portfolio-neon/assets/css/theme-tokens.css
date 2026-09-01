@@ -1,1 +1,45 @@
-/* Léo Nunes Portfólio Neon — Design Tokens (preenchido na Task 2) */
+/* Léo Nunes Portfólio Neon — Design Tokens */
+
+:root {
+  /* Fontes */
+  --default-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --heading-font: "Space Grotesk", sans-serif;
+  --nav-font: "Space Grotesk", sans-serif;
+  --code-font: "JetBrains Mono", monospace;
+
+  /* Cores globais (sobrescreve main.css) */
+  --background-color: #0a0a12;
+  --default-color: #f5f5fa;
+  --heading-color: #ffffff;
+  --accent-color: #00ffe0;
+  --accent-color-alt: #ff2ee6;
+  --surface-color: #12121c;
+  --contrast-color: #0a0a12;
+
+  /* Tokens novos, exclusivos do tema neon */
+  --neon-gradient: linear-gradient(90deg, #00ffe0, #ff2ee6);
+  --neon-glow-cyan: 0 0 10px rgba(0, 255, 224, 0.6);
+  --neon-glow-magenta: 0 0 10px rgba(255, 46, 230, 0.55);
+}
+
+:root {
+  --nav-color: #9aa0b4;
+  --nav-hover-color: #00ffe0;
+  --nav-mobile-background-color: #0a0a12;
+  --nav-dropdown-background-color: #0a0a12;
+  --nav-dropdown-color: #9aa0b4;
+  --nav-dropdown-hover-color: #00ffe0;
+}
+
+.light-background {
+  --background-color: #12121c;
+  --surface-color: #171727;
+}
+
+.dark-background {
+  --background-color: #05050a;
+  --default-color: #f5f5fa;
+  --heading-color: #ffffff;
+  --surface-color: #12121c;
+  --contrast-color: #0a0a12;
+}
