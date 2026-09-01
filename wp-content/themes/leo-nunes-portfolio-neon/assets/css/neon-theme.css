@@ -1,1 +1,228 @@
-/* Léo Nunes Portfólio Neon — Estilos de componente (preenchido na Task 3) */
+/* Léo Nunes Portfólio Neon — Estilos de componente */
+
+/* ===== Header / Sidebar Nav ===== */
+#header.header {
+  border-right: 1px solid rgba(0, 255, 224, 0.15);
+}
+
+.header .logo .sitename {
+  font-family: var(--heading-font);
+  text-shadow: var(--neon-glow-cyan);
+}
+
+.header .profile-img img {
+  box-shadow: 0 0 16px rgba(0, 255, 224, 0.35);
+}
+
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus {
+  text-shadow: var(--neon-glow-cyan);
+}
+
+.navmenu .active {
+  border-left: 2px solid var(--accent-color);
+}
+
+/* ===== Hero ===== */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(90deg, rgba(0, 255, 224, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(0, 255, 224, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.hero h2 {
+  font-family: var(--heading-font);
+  text-shadow: var(--neon-glow-cyan);
+}
+
+.hero p .typed {
+  font-family: var(--code-font);
+  color: var(--accent-color);
+}
+
+.hero .typed-cursor {
+  color: var(--accent-color);
+}
+
+/* ===== Títulos de seção (global) ===== */
+.section-title h2 {
+  font-family: var(--heading-font);
+  text-shadow: var(--neon-glow-cyan);
+}
+
+.section-title h2:after {
+  background: var(--neon-gradient) !important;
+}
+
+/* ===== Portfólio ===== */
+.portfolio .portfolio-filters li.filter-active,
+.portfolio .portfolio-filters li:hover {
+  text-shadow: var(--neon-glow-cyan);
+}
+
+.portfolio .portfolio-content {
+  border: 1px solid rgba(0, 255, 224, 0.12);
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio .portfolio-content:hover {
+  border-color: var(--accent-color);
+  box-shadow: var(--neon-glow-cyan);
+}
+
+.portfolio .portfolio-content .portfolio-info h4 {
+  background: var(--neon-gradient);
+  color: var(--contrast-color);
+}
+
+.portfolio .btn-load-more {
+  background: var(--neon-gradient);
+  color: var(--contrast-color);
+  box-shadow: var(--neon-glow-cyan);
+}
+
+/* ===== Serviços ===== */
+.services .service-item {
+  border: 1px solid rgba(0, 255, 224, 0.12);
+  border-radius: 8px;
+  padding: 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services .service-item:hover {
+  border-color: var(--accent-color);
+  box-shadow: var(--neon-glow-cyan);
+}
+
+.services .service-item .icon i {
+  color: var(--accent-color);
+  text-shadow: var(--neon-glow-cyan);
+}
+
+/* ===== Sobre mim ===== */
+.about img {
+  box-shadow: 0 0 24px rgba(0, 255, 224, 0.25);
+}
+
+.about .content ul li i.bi-chevron-right {
+  color: var(--accent-color);
+}
+
+/* ===== Resumo / Timeline ===== */
+.resume .resume-item h4,
+.resume .timeline-swiper .resume-item h4 {
+  font-family: var(--heading-font);
+  color: var(--accent-color);
+}
+
+.resume .resume-item::before,
+.resume .timeline-swiper .resume-item::before {
+  background-color: var(--accent-color);
+  box-shadow: var(--neon-glow-cyan);
+}
+
+.resume .timeline-swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--accent-color);
+}
+
+/* ===== Skills ===== */
+.skills .progress-bar-wrap {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.skills .progress-bar {
+  background: var(--neon-gradient);
+  box-shadow: var(--neon-glow-cyan);
+}
+
+.skills .skill .val {
+  color: var(--accent-color);
+  font-family: var(--code-font);
+}
+
+/* ===== Estatísticas ===== */
+.stats .stats-item i {
+  color: var(--accent-color);
+  text-shadow: var(--neon-glow-cyan);
+}
+
+.stats .stats-item .purecounter {
+  font-family: var(--heading-font);
+  text-shadow: var(--neon-glow-cyan);
+}
+
+/* ===== Depoimentos ===== */
+.testimonials .testimonial-item {
+  border: 1px solid rgba(0, 255, 224, 0.12);
+  border-radius: 8px;
+}
+
+.testimonials .testimonial-item .quote-icon-left,
+.testimonials .testimonial-item .quote-icon-right {
+  color: var(--accent-color-alt);
+}
+
+.testimonials .testimonial-item .testimonial-img {
+  border: 2px solid var(--accent-color);
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+/* ===== Contato ===== */
+.contact .info-item i {
+  color: var(--accent-color);
+  text-shadow: var(--neon-glow-cyan);
+}
+
+.contact .php-email-form input[type=text],
+.contact .php-email-form input[type=email],
+.contact .php-email-form textarea {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 255, 224, 0.2);
+  color: var(--default-color);
+}
+
+.contact .php-email-form input[type=text]:focus,
+.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form textarea:focus {
+  border-color: var(--accent-color);
+  box-shadow: var(--neon-glow-cyan);
+}
+
+.contact .php-email-form button[type=submit] {
+  background: var(--neon-gradient);
+  color: var(--contrast-color);
+  border: none;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  box-shadow: var(--neon-glow-cyan);
+}
+
+/* ===== Footer ===== */
+#footer.footer {
+  border-top: 1px solid rgba(0, 255, 224, 0.12);
+}
+
+.footer .copyright .sitename {
+  font-family: var(--code-font);
+  color: var(--accent-color);
+}
+
+#whatsapp-float {
+  box-shadow: var(--neon-glow-cyan);
+}
+
+.scroll-top:hover {
+  box-shadow: var(--neon-glow-cyan);
+}
