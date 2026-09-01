@@ -107,6 +107,12 @@
   text-shadow: var(--neon-glow-cyan);
 }
 
+.services .service-item .icon {
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  box-shadow: var(--neon-glow-cyan);
+}
+
 /* ===== Sobre mim ===== */
 .about img {
   box-shadow: 0 0 24px rgba(0, 255, 224, 0.25);
@@ -225,4 +231,12 @@
 
 .scroll-top:hover {
   box-shadow: var(--neon-glow-cyan);
+}
+
+/* ===== Overrides de hover em gradiente (vencem regras conflitantes do tema pai) ===== */
+.portfolio .btn-load-more:hover,
+.contact .php-email-form button[type=submit]:hover {
+  background: var(--neon-gradient);
+  box-shadow: var(--neon-glow-cyan);
+  filter: brightness(1.15);
 }

@@ -6,13 +6,20 @@
  * independentemente da prioridade do hook.
  */
 function leo_neon_enqueue_assets() {
-	$ver = wp_get_environment_type() === 'production' ? '1.0.0' : (string) time();
+	$ver = (string) filemtime( get_stylesheet_directory() . '/assets/css/neon-theme.css' );
 
 	wp_enqueue_style(
 		'google-fonts-neon',
 		'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap',
 		[],
 		null
+	);
+
+	wp_enqueue_style(
+		'leo-parent-style',
+		get_template_directory_uri() . '/style.css',
+		[ 'main' ],
+		$ver
 	);
 
 	wp_enqueue_style(
